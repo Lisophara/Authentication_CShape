@@ -1,0 +1,243 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{A7A39D09-8626-4625-8D76-B4872B8EB394}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <RootNamespace>Authenticator</RootNamespace>
+    <AssemblyName>Authenticator</AssemblyName>
+    <TargetFrameworkVersion>v4.7.2</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
+    <Deterministic>true</Deterministic>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup>
+    <ApplicationIcon>hnet.com-image.ico</ApplicationIcon>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="Microsoft.AspNetCore.WebUtilities, Version=2.2.0.0, Culture=neutral, PublicKeyToken=adb9793829ddae60, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.AspNetCore.WebUtilities.2.2.0\lib\netstandard2.0\Microsoft.AspNetCore.WebUtilities.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Extensions.Primitives, Version=2.2.0.0, Culture=neutral, PublicKeyToken=adb9793829ddae60, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.Extensions.Primitives.2.2.0\lib\netstandard2.0\Microsoft.Extensions.Primitives.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Net.Http.Headers, Version=2.2.0.0, Culture=neutral, PublicKeyToken=adb9793829ddae60, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.Net.Http.Headers.2.2.0\lib\netstandard2.0\Microsoft.Net.Http.Headers.dll</HintPath>
+    </Reference>
+    <Reference Include="Otp.NET, Version=1.2.2.0, Culture=neutral, PublicKeyToken=38a48df817e173a6, processorArchitecture=MSIL">
+      <HintPath>..\packages\Otp.NET.1.2.2\lib\net45\Otp.NET.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.Buffers, Version=4.0.3.0, Culture=neutral, PublicKeyToken=cc7b13ffcd2ddd51, processorArchitecture=MSIL">
+      <HintPath>..\packages\System.Buffers.4.5.0\lib\netstandard2.0\System.Buffers.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Configuration" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Design" />
+    <Reference Include="System.Memory, Version=4.0.1.0, Culture=neutral, PublicKeyToken=cc7b13ffcd2ddd51, processorArchitecture=MSIL">
+      <HintPath>..\packages\System.Memory.4.5.1\lib\netstandard2.0\System.Memory.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Numerics" />
+    <Reference Include="System.Numerics.Vectors, Version=4.1.3.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL">
+      <HintPath>..\packages\System.Numerics.Vectors.4.4.0\lib\net46\System.Numerics.Vectors.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Runtime.CompilerServices.Unsafe, Version=4.0.4.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL">
+      <HintPath>..\packages\System.Runtime.CompilerServices.Unsafe.4.5.1\lib\netstandard2.0\System.Runtime.CompilerServices.Unsafe.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Text.Encodings.Web, Version=4.0.3.0, Culture=neutral, PublicKeyToken=cc7b13ffcd2ddd51, processorArchitecture=MSIL">
+      <HintPath>..\packages\System.Text.Encodings.Web.4.5.0\lib\netstandard2.0\System.Text.Encodings.Web.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Web" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Deployment" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Net.Http" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+    <Reference Include="zxing, Version=0.16.6.0, Culture=neutral, PublicKeyToken=4e88037ac681fe60, processorArchitecture=MSIL">
+      <HintPath>..\packages\ZXing.Net.0.16.6\lib\net47\zxing.dll</HintPath>
+    </Reference>
+    <Reference Include="zxing.presentation, Version=0.16.6.0, Culture=neutral, PublicKeyToken=4e88037ac681fe60, processorArchitecture=MSIL">
+      <HintPath>..\packages\ZXing.Net.0.16.6\lib\net47\zxing.presentation.dll</HintPath>
+    </Reference>
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="MainForm\AuthView.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="MainForm\AuthView.Designer.cs">
+      <DependentUpon>AuthView.cs</DependentUpon>
+    </Compile>
+    <Compile Include="AuthenticatorDetail\Auth_Mode.cs" />
+    <Compile Include="AuthenticatorDetail\QueryType.cs" />
+    <Compile Include="MainForm\RestoreAuth.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="MainForm\RestoreAuth.Designer.cs">
+      <DependentUpon>RestoreAuth.cs</DependentUpon>
+    </Compile>
+    <Compile Include="AuthenticatorDetail\UrlQueryParam.cs" />
+    <Compile Include="AuthStringFile\AuthFileSecret.cs" />
+    <Compile Include="Custom\CircleProcess.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Custom\CircleProcess.Designer.cs">
+      <DependentUpon>CircleProcess.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Custom\CustomScrollBar.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Custom\CustomScrollBar.Designer.cs">
+      <DependentUpon>CustomScrollBar.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Custom\MessageButton.cs" />
+    <Compile Include="Custom\MessageInform.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Custom\MessageInform.Designer.cs">
+      <DependentUpon>MessageInform.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Custom\MoveForm.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Custom\MoveForm.Designer.cs">
+      <DependentUpon>MoveForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Custom\RoundButton.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Custom\ThemeColor.cs" />
+    <Compile Include="Custom\TxtBox.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Custom\TxtBox.Designer.cs">
+      <DependentUpon>TxtBox.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Guide\Privacy.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Guide\Privacy.Designer.cs">
+      <DependentUpon>Privacy.cs</DependentUpon>
+    </Compile>
+    <Compile Include="MainForm\Form1.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="MainForm\Form1.Designer.cs">
+      <DependentUpon>Form1.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Program.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="MainForm\ScanQR.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="MainForm\ScanQR.Designer.cs">
+      <DependentUpon>ScanQR.cs</DependentUpon>
+    </Compile>
+    <EmbeddedResource Include="MainForm\AuthView.resx">
+      <DependentUpon>AuthView.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="MainForm\RestoreAuth.resx">
+      <DependentUpon>RestoreAuth.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Custom\CircleProcess.resx">
+      <DependentUpon>CircleProcess.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Custom\MessageInform.resx">
+      <DependentUpon>MessageInform.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Custom\MoveForm.resx">
+      <DependentUpon>MoveForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Custom\TxtBox.resx">
+      <DependentUpon>TxtBox.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Guide\Privacy.resx">
+      <DependentUpon>Privacy.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="MainForm\Form1.resx">
+      <DependentUpon>Form1.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <SubType>Designer</SubType>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="MainForm\ScanQR.resx">
+      <DependentUpon>ScanQR.cs</DependentUpon>
+    </EmbeddedResource>
+    <None Include="packages.config" />
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Resources.resx</DependentUpon>
+    </Compile>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="App.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\threelines.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\MyFacebook.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\1012-10120522_key-password-lock-secure-locked-security-comments-key.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\CloseApplication.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="hnet.com-image.ico" />
+    <None Include="Resources\Dark_Internet.png" />
+    <None Include="Resources\Light_Internet.png" />
+    <None Include="Resources\Dark_FinishClipbord.png" />
+    <None Include="Resources\Light_FinishClipbord.png" />
+    <None Include="Resources\Light_AddKey.png" />
+    <None Include="Resources\Dark_Restore1.png" />
+    <None Include="Resources\Dark_Restore.png" />
+    <None Include="Resources\Light_Setting.png" />
+    <None Include="Resources\Dark_Setting.png" />
+    <None Include="Resources\Light_ThreeLine.png" />
+    <None Include="Resources\Light_ScanQR.png" />
+    <None Include="Resources\Light_Restore.png" />
+    <None Include="Resources\Light_CloseApplication.png" />
+    <None Include="Resources\Light_Application.png" />
+    <None Include="Resources\Dark_Application.png" />
+  </ItemGroup>
+  <ItemGroup />
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+</Project>
