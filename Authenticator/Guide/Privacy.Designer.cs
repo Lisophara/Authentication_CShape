@@ -35,6 +35,7 @@ namespace Authenticator.Guide
             this.moveForm1 = new Authenticator.Custom.MoveForm();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.lb_Caption = new System.Windows.Forms.Label();
+            this.author = new System.Windows.Forms.Label();
             this.moveForm1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
@@ -98,12 +99,24 @@ namespace Authenticator.Guide
             this.lb_Caption.Text = "Detail\r\n";
             this.lb_Caption.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
+            // author
+            // 
+            this.author.AutoSize = true;
+            this.author.Font = new System.Drawing.Font("Microsoft Sans Serif", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.author.ForeColor = System.Drawing.Color.White;
+            this.author.Location = new System.Drawing.Point(427, 185);
+            this.author.Name = "author";
+            this.author.Size = new System.Drawing.Size(114, 18);
+            this.author.TabIndex = 3;
+            this.author.Text = "Leam Lisophara";
+            // 
             // Privacy
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(65)))), ((int)(((byte)(65)))), ((int)(((byte)(65)))));
             this.ClientSize = new System.Drawing.Size(553, 203);
+            this.Controls.Add(this.author);
             this.Controls.Add(this.lk_Report);
             this.Controls.Add(this.moveForm1);
             this.Controls.Add(this.lb_Info);
@@ -125,5 +138,6 @@ namespace Authenticator.Guide
         private System.Windows.Forms.Label lb_Caption;
         private System.Windows.Forms.Label lb_Info;
         private System.Windows.Forms.LinkLabel lk_Report;
+        private System.Windows.Forms.Label author;
     }
 }

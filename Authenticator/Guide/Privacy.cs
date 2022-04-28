@@ -15,6 +15,7 @@ namespace Authenticator.Guide
         public Privacy()
         {
             InitializeComponent();
+            author.Text = "Leam Lisophara" + (char)169;
             //Theme();
         }
 
